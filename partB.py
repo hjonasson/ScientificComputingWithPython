@@ -23,3 +23,14 @@ def vowelCount(file):
 			counts[i] += 1
 	
 	print 'The vowel count in the Gettysburg address is:', counts
+
+#Sort lines alphabetically, capital letters first? Why not.
+def sortFile(file):
+	
+	file = open(file).readlines()
+	file = sorted(file)
+	newFile = open('ga_sortd.txt','w')
+	for line in file:
+		newFile.write(line)
+	newFile.close
+	
