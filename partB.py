@@ -28,7 +28,7 @@ def vowelCount(file):
 def sortFile(file):
 	
 	file = open(file).readlines()
-	file = sorted(file)
+	file = sorted(file,key = lambda i: i.lower())
 	newFile = open('ga_sortd.txt','w')
 	for line in file:
 		newFile.write(line)
