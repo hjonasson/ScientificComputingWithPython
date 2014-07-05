@@ -15,3 +15,17 @@ def logisticData(delta = .00005):
 			file.write(str(j)+' '+str(x0)+'\n')
 			x0 = iterateLogistic(x0,4.,j)
 		file.close
+
+def matrixRead(file):
+
+	file = open(file).readlines()	
+	return [[float(line.split()[i]) for i in range(len(line.split()))] for line in file]
+
+def matrixWrite(mat,file)
+
+	file = open(file,'w')
+	for row in mat:
+		for col in row:
+			file.write(str(col)+' ')
+		file.write('\n')
+	file.close
